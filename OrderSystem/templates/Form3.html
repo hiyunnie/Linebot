@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>下訂表單</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="row" style="margin: 10px">
+    
+        <div class="col-12" style="margin: 10px">
+            <p style="text-align:center;font-size: 18px;">食材選單</p>
+            <hr size="8px" align="center" width="100%">
+    <table  border='0'>
+    <thead>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center" width="200" >         
+             臭豆腐數量 <select id="01_amount" class="form-control"  min="0"  value="0" style="width:160px; height:30px; text-align: right;">
+                        <option selected>0</option>
+                        <option>1箱</option>
+                        <option>2箱</option>
+                        <option>3箱</option>
+                        <option>4箱</option>
+                        <option>5箱</option>
+                        <option>6箱</option>
+                        <option>7箱</option>
+                        <option>8箱</option>
+                        <option>9箱</option>
+                        <option>10箱</option>
+                        </select>
+            </td>
+            <td align="center" width="200" >        
+             冬粉數量 <select id="02_amount" class="form-control"  min="0"  value="0" style="width:160px; height:30px; text-align: right;">
+                        <option selected>0</option>
+                        <option>1箱</option>
+                        <option>2箱</option>
+                        <option>3箱</option>
+                        <option>4箱</option>
+                        <option>5箱</option>
+                        </select>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" width="200" >
+            <br />         
+             泡菜數量 <select id="03_amount" class="form-control"  min="0"  value="0" style="width:160px; height:30px; text-align: right;">
+                        <option selected>0</option>
+                        <option>1箱(5包)</option>
+                        <option>2箱(10包)</option>
+                        <option>3箱(15包)</option>
+                        <option>4箱(20包)</option>
+                        <option>5箱(25包)</option>
+                        </select>
+            </td>
+            <td align="center" width="200" >
+            <br />        
+             豆皮數量 <select id="04_amount" class="form-control"  min="0"  value="0" style="width:160px; height:30px; text-align: right;">
+                        <option selected>0</option>
+                        <option>1箱</option>
+                        <option>2箱</option>
+                        <option>3箱</option>
+                        <option>4箱</option>
+                        <option>5箱</option>
+                        <option>6箱</option>
+                        <option>7箱</option>
+                        <option>8箱</option>
+                        <option>9箱</option>
+                        <option>10箱</option>
+                        </select>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" width="200" >
+            <br />         
+             酸白菜數量 <select id="05_amount" class="form-control"  min="0"  value="0" style="width:160px; height:30px; text-align: right;">
+                        <option selected>0</option>
+                        <option>1包</option>
+                        <option>2包</option>
+                        <option>3包</option>
+                        <option>4包</option>
+                        <option>5包</option>
+                        </select>
+            </td>
+            <td align="center" width="200" >
+            <br />        
+
+            </td>
+        </tr>        
+    </tbody>
+</table>
+<br /> 
+            <p style="text-align:center ;font-size: 18px;" >其他選單</p>
+            <hr size="8px" align="center" width="100%">
+    <table  border='0'>
+    <thead>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center" width="200" >         
+             酒精膏數量 <select id="11_amount" class="form-control"  min="0"  value="0" style="width:160px; height:30px; text-align: right;">
+                        <option selected>0</option>
+                        <option>1箱</option>
+                        <option>2箱</option>
+                        <option>3箱</option>
+                        </select>
+            </td>
+            <td align="center" width="200" >        
+             面紙數量 <select id="12_amount" class="form-control"  min="0"  value="0" style="width:160px; height:30px; text-align: right;">
+                        <option selected>0</option>
+                        <option>1箱</option>
+                        <option>2箱</option>
+                        <option>3箱</option>
+                        </select>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" width="200" >
+            <br />         
+             1000cc湯杯數量 <select id="130_amount" class="form-control"  min="0"  value="0" style="width:160px; height:30px; text-align: right;">
+                        <option selected>0</option>
+                        <option>1箱(600個)</option>
+                        <option>2箱(1200個)</option>
+                        <option>3箱(1800個)</option>
+                        <option>4箱(1400個)</option>
+                        <option>5箱(3000個)</option>
+                        </select>
+            </td>
+            <td align="center" width="200" >
+            <br />        
+             1000cc湯杯蓋數量 <select id="131_amount" class="form-control"  min="0"  value="0" style="width:160px; height:30px; text-align: right;">
+                        <option selected>0</option>
+                        <option>1箱(600個)</option>
+                        <option>2箱(1200個)</option>
+                        <option>3箱(1800個)</option>
+                        <option>4箱(1400個)</option>
+                        <option>5箱(3000個)</option>
+                        </select>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" width="200" >
+            <br />         
+             260cc湯杯數量 <select id="132_amount" class="form-control"  min="0"  value="0" style="width:160px; height:30px; text-align: right;">
+                        <option selected>0</option>
+                        <option>1箱(2000個)</option>
+                        <option>2箱(4000個)</option>
+                        <option>3箱(6000個)</option>
+                        <option>4箱(8000個)</option>
+                        <option>5箱(10000個)</option>
+                        </select>
+            </td>
+            <td align="center" width="200" >
+            <br />        
+             260cc湯杯蓋數量 <select id="133_amount" class="form-control"  min="0"  value="0" style="width:160px; height:30px; text-align: right;">
+                        <option selected>0</option>
+                        <option>1箱(2000個)</option>
+                        <option>2箱(4000個)</option>
+                        <option>3箱(6000個)</option>
+                        <option>4箱(8000個)</option>
+                        <option>5箱(10000個)</option>
+                        </select>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" width="200" >
+            <br />         
+             850cc湯杯數量 <select id="134_amount" class="form-control"  min="0"  value="0" style="width:160px; height:30px; text-align: right;">
+                        <option selected>0</option>
+                        <option>1箱(600個)</option>
+                        <option>2箱(1200個)</option>
+                        <option>3箱(1800個)</option>
+                        <option>4箱(1400個)</option>
+                        <option>5箱(3000個)</option>
+                        </select>
+            </td>
+            <td align="center" width="200" >
+            <br />        
+             手提袋數量 <select id="14_amount" class="form-control"  min="0"  value="0" style="width:160px; height:30px; text-align: right;">
+                        <option selected>0</option>
+                        <option>1包1號</option>
+                        <option>1包2號</option>
+                        <option>1包3號</option>
+                        </select>
+            </td>
+        </tr>
+    </tbody>
+</table>  
+      
+<br />
+            <p style="text-align:center ;font-size: 18px;" >送貨日期</p>
+            <hr size="8px" align="center" width="100%">                  
+            <input type="date" id="in_datetime" value="" class="form-control" value="2022-00-00" style="text-align:center; height:40px;"/>
+            <br />
+            <button class="btn btn-success btn-block" id="btn_reserve">確定</button>
+            
+        </div>
+    </div>
+
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+	<script language="javascript">
+        	
+        var Today=new Date();
+        function initializeLiff(myLiffId) {
+            liff.init({liffId: myLiffId });
+        }
+
+        function reserve(amount01, amount02, amount03, amount04,amount05, amount11, amount12, amount130,amount131,amount132,amount133,amount134,amount14, in_datetime) {
+
+            if (amount01 == '0' && amount02 == '0' && amount03 == '0' && amount04 == '0' && amount05 == '0' && amount11 == '0' && amount12 == '0'&& amount130 == '0' && amount131 == '0' && amount132 == '0' && amount133 == '0' && amount134 == '0' && amount14 == '0') {  //資料檢查
+                alert("所有欄位都要填寫！");
+                return;
+            }
+        		if (in_datetime == '') {
+        			alert("送達日期未填！");
+        			return;
+        		}      
+        		if ((Date.parse(in_datetime)).valueOf() <= Today) {
+        			alert("送達日期不能小於今天！");
+        			return;
+        		}            
+                
+            var msg = "###";  //回傳訊息字串
+
+            msg = msg + amount01 + "/";
+            msg = msg + amount02 + "/";
+            msg = msg + amount03 + "/";
+            msg = msg + amount04 + "/";
+            msg = msg + amount05 + "/";
+            msg = msg + amount11 + "/";
+            msg = msg + amount12 + "/";
+            msg = msg + amount130 + "/";
+            msg = msg + amount131 + "/";
+            msg = msg + amount132 + "/";
+            msg = msg + amount133 + "/";
+            msg = msg + amount134 + "/";
+            msg = msg + amount14 + "/";   
+            
+            msg = msg + in_datetime + "/";
+            
+            
+			liff.sendMessages([  //推播訊息
+				{ type: 'text',
+				  text: msg
+				}
+			])
+				.then(() => {
+					liff.closeWindow();  //關閉視窗
+				});
+		}
+
+		$(document).ready(function () {
+			initializeLiff('{{ liffid }}');
+            $('#btn_reserve').click(function (e) {  //按下確定鈕
+                reserve($('#01_amount').val(),$('#02_amount').val(),$('#03_amount').val(),$('#04_amount').val(),$('#05_amount').val(),$('#11_amount').val(),$('#12_amount').val(),$('#130_amount').val(),$('#131_amount').val(),$('#132_amount').val(),$('#133_amount').val(),$('#134_amount').val(),$('#14_amount').val(),$('#in_datetime').val());
+            });
+		});
+	</script>
+</body>
+</html>

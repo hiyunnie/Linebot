@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>新戶註冊</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="row" style="margin: 10px">
+        <div class="col-12" style="margin: 10px">
+            <label>店家所在地</label>
+            <select id="loca" class="form-control">
+                <option selected>0</option>
+                <option>松山區</option>
+                <option>桃園區</option>
+                <option>北投區</option>
+            </select>
+            <br />
+            <label>店家資訊</label>
+            <select id="info" class="form-control">
+                <option selected>0</option>
+                <option>麗媽</option>
+                <option>鍋in</option>
+                <option>大呼過癮</option>
+            </select>
+            <br />
+            <button class="btn btn-success btn-block" id="btn_reserve">確定</button>
+        </div>
+    </div>
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+	<script>
+        function initializeLiff(myLiffId) {
+            liff.init({liffId: myLiffId });
+        }
+
+        function reserve(loca, info) {
+            if (loca == '0' || info == '0') {  //資料檢查
+                alert('所有欄位都要填寫！');
+                return;
+            }
+
+            var msg = "@@@";  //回傳訊息字串
+            msg = msg + loca + "/";
+            msg = msg + info + "/";
+
+			liff.sendMessages([  //推播訊息
+				{ type: 'text',
+				  text: msg
+				}
+			])
+				.then(() => {
+					liff.closeWindow();  //關閉視窗
+				});
+		}
+
+		$(document).ready(function () {
+			initializeLiff('{{ liffid }}');
+            $('#btn_reserve').click(function (e) {  //按下確定鈕
+                reserve($('#loca').val(), $('#info').val());
+            });
+		});
+	</script>
+</body>
+</html>
